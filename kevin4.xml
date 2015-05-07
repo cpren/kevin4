@@ -28,8 +28,8 @@
                   </block>
                 </value>
                 <next>
-                  <block type="multimedia_displaybmp" id="9">
-                    <field name="BMP">a</field>
+                  <block type="oled_drawtext" id="52">
+                    <field name="TEXT">OO</field>
                     <next>
                       <block type="movement_forward" id="10">
                         <next>
