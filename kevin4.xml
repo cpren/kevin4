@@ -156,7 +156,4 @@
       </block>
     </next>
   </block>
-  <block type="oled_drawtext" id="52" x="191" y="-463">
-    <field name="TEXT">OO</field>
-  </block>
 </xml>
