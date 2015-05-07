@@ -16,26 +16,45 @@
           <block type="oled_drawtext" id="138">
             <field name="TEXT">Hi, i am a robot dog</field>
             <next>
-              <block type="controls_whileUntil" id="357" inline="false">
-                <field name="MODE">WHILE</field>
-                <value name="NUMBER">
-                  <block type="logic_compare" id="388" inline="true">
-                    <field name="OP">LT</field>
-                    <value name="A">
-                      <block type="sensor_object" id="145">
-                        <field name="OBJECT">REAR</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="math_number" id="372">
-                        <field name="NUM">10</field>
-                      </block>
-                    </value>
+              <block type="oled_setcursor" id="435" inline="true">
+                <value name="STARTX">
+                  <block type="math_number" id="436">
+                    <field name="NUM">10</field>
                   </block>
                 </value>
-                <statement name="DO">
-                  <block type="movement_stutter" id="425"></block>
-                </statement>
+                <value name="STARTY">
+                  <block type="math_number" id="437">
+                    <field name="NUM">30</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="oled_drawtext" id="434">
+                    <field name="TEXT">Touch my back</field>
+                    <next>
+                      <block type="controls_whileUntil" id="357" inline="false">
+                        <field name="MODE">WHILE</field>
+                        <value name="NUMBER">
+                          <block type="logic_compare" id="388" inline="true">
+                            <field name="OP">LT</field>
+                            <value name="A">
+                              <block type="sensor_object" id="145">
+                                <field name="OBJECT">REAR</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="372">
+                                <field name="NUM">10</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO">
+                          <block type="movement_stutter" id="425"></block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
