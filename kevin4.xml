@@ -1,31 +1,49 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_drawtext" id="138" x="25" y="-537">
-    <field name="TEXT">Hi, i am a robot dog</field>
+  <block type="oled_cleardisplay" id="314" x="27" y="-561">
     <next>
-      <block type="oled_drawtext" id="154">
-        <field name="TEXT">Plz touch my rear</field>
+      <block type="oled_setcursor" id="323" inline="true">
+        <value name="STARTX">
+          <block type="math_number" id="324">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+        <value name="STARTY">
+          <block type="math_number" id="325">
+            <field name="NUM">10</field>
+          </block>
+        </value>
         <next>
-          <block type="controls_if" id="273" inline="false">
-            <value name="IF0">
-              <block type="sensor_object" id="145">
-                <field name="OBJECT">REAR</field>
-              </block>
-            </value>
-            <statement name="DO0">
-              <block type="movement_forward" id="283">
+          <block type="oled_drawtext" id="138">
+            <field name="TEXT">Hi, i am a robot dog</field>
+            <next>
+              <block type="oled_drawtext" id="154">
+                <field name="TEXT">Plz touch my rear</field>
                 <next>
-                  <block type="robot_delay" id="295" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="305">
-                        <field name="NUM">1000</field>
+                  <block type="controls_if" id="273" inline="false">
+                    <value name="IF0">
+                      <block type="sensor_object" id="145">
+                        <field name="OBJECT">REAR</field>
                       </block>
                     </value>
+                    <statement name="DO0">
+                      <block type="movement_forward" id="283">
+                        <next>
+                          <block type="robot_delay" id="295" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="305">
+                                <field name="NUM">1000</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="movement_stop" id="293"></block>
+                    </next>
                   </block>
                 </next>
               </block>
-            </statement>
-            <next>
-              <block type="movement_stop" id="293"></block>
             </next>
           </block>
         </next>
