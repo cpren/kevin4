@@ -28,8 +28,12 @@
                   </block>
                 </value>
                 <next>
-                  <block type="oled_drawtext" id="52">
-                    <field name="TEXT">OO</field>
+                  <block type="oled_drawnumber" id="78" inline="true">
+                    <value name="NUMBER">
+                      <block type="math_number" id="85">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
                     <next>
                       <block type="movement_forward" id="10">
                         <next>
@@ -151,5 +155,8 @@
         </next>
       </block>
     </next>
+  </block>
+  <block type="oled_drawtext" id="52" x="191" y="-463">
+    <field name="TEXT">OO</field>
   </block>
 </xml>
