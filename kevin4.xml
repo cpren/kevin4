@@ -25,30 +25,21 @@
                         <field name="MODE">WHILE</field>
                         <value name="NUMBER">
                           <block type="logic_compare" id="388" inline="true">
-                            <field name="OP">EQ</field>
+                            <field name="OP">LT</field>
                             <value name="A">
-                              <block type="math_number" id="380">
-                                <field name="NUM">1</field>
+                              <block type="sensor_object" id="145">
+                                <field name="OBJECT">REAR</field>
                               </block>
                             </value>
                             <value name="B">
                               <block type="math_number" id="372">
-                                <field name="NUM">1</field>
+                                <field name="NUM">10</field>
                               </block>
                             </value>
                           </block>
                         </value>
                         <statement name="DO">
-                          <block type="controls_if" id="273" inline="false">
-                            <value name="IF0">
-                              <block type="sensor_object" id="145">
-                                <field name="OBJECT">REAR</field>
-                              </block>
-                            </value>
-                            <statement name="DO0">
-                              <block type="movement_stutter" id="410"></block>
-                            </statement>
-                          </block>
+                          <block type="movement_stutter" id="425"></block>
                         </statement>
                       </block>
                     </next>
