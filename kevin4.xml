@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_cleardisplay" id="314" x="27" y="-561">
+  <block type="oled_cleardisplay" id="314" x="33" y="-522">
     <next>
       <block type="oled_setcursor" id="323" inline="true">
         <value name="STARTX">
@@ -16,38 +16,42 @@
           <block type="oled_drawtext" id="138">
             <field name="TEXT">Hi, i am a robot dog</field>
             <next>
-              <block type="oled_drawtext" id="154">
-                <field name="TEXT">Plz touch my butt</field>
+              <block type="oled_cleardisplay" id="412">
                 <next>
-                  <block type="controls_whileUntil" id="357" inline="false">
-                    <field name="MODE">WHILE</field>
-                    <value name="NUMBER">
-                      <block type="logic_compare" id="388" inline="true">
-                        <field name="OP">EQ</field>
-                        <value name="A">
-                          <block type="math_number" id="380">
-                            <field name="NUM">1</field>
+                  <block type="oled_drawtext" id="154">
+                    <field name="TEXT">Plz touch my butt</field>
+                    <next>
+                      <block type="controls_whileUntil" id="357" inline="false">
+                        <field name="MODE">WHILE</field>
+                        <value name="NUMBER">
+                          <block type="logic_compare" id="388" inline="true">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="math_number" id="380">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="372">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
                           </block>
                         </value>
-                        <value name="B">
-                          <block type="math_number" id="372">
-                            <field name="NUM">1</field>
+                        <statement name="DO">
+                          <block type="controls_if" id="273" inline="false">
+                            <value name="IF0">
+                              <block type="sensor_object" id="145">
+                                <field name="OBJECT">REAR</field>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="movement_stutter" id="410"></block>
+                            </statement>
                           </block>
-                        </value>
-                      </block>
-                    </value>
-                    <statement name="DO">
-                      <block type="controls_if" id="273" inline="false">
-                        <value name="IF0">
-                          <block type="sensor_object" id="145">
-                            <field name="OBJECT">REAR</field>
-                          </block>
-                        </value>
-                        <statement name="DO0">
-                          <block type="movement_stutter" id="410"></block>
                         </statement>
                       </block>
-                    </statement>
+                    </next>
                   </block>
                 </next>
               </block>
