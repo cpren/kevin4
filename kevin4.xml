@@ -29,7 +29,7 @@
                 </value>
                 <next>
                   <block type="multimedia_displaybmp" id="99">
-                    <field name="BMP">0 0</field>
+                    <field name="BMP">O O</field>
                     <next>
                       <block type="movement_forward" id="6">
                         <next>
