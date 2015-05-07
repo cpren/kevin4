@@ -17,7 +17,7 @@
             <field name="TEXT">Hi, i am a robot dog</field>
             <next>
               <block type="oled_drawtext" id="154">
-                <field name="TEXT">Plz touch my rear</field>
+                <field name="TEXT">Plz touch my butt</field>
                 <next>
                   <block type="controls_whileUntil" id="357" inline="false">
                     <field name="MODE">WHILE</field>
