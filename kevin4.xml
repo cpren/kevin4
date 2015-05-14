@@ -1,9 +1,22 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="robot_delay" id="79" inline="true" x="2" y="1"></block>
-  <block type="math_shift" id="77" inline="true" x="151" y="102">
-    <field name="OP">RIGHT</field>
-  </block>
-  <block type="multimedia_playwav" id="53" x="372" y="208">
-    <field name="WAV"></field>
+  <block type="movement_forward" id="13" x="54" y="15">
+    <next>
+      <block type="robot_delay" id="15" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="22">
+            <field name="NUM">5000</field>
+          </block>
+        </value>
+        <next>
+          <block type="robot_delay" id="23" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="24">
+                <field name="NUM">5000</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
   </block>
 </xml>
