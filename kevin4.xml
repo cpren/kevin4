@@ -1,1 +1,9 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="robot_delay" id="79" inline="true" x="2" y="1"></block>
+  <block type="math_shift" id="77" inline="true" x="151" y="102">
+    <field name="OP">RIGHT</field>
+  </block>
+  <block type="multimedia_playwav" id="53" x="372" y="208">
+    <field name="WAV"></field>
+  </block>
+</xml>
